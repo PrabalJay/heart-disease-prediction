@@ -25,14 +25,25 @@ Built with **Flask**, **scikit-learn**, and a visually appealing, responsive int
 
 ---
 
-## 🎬 Demo Video
-
-<p align="center">
-  <video width="600" controls>
-    <source src="images/demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</p>
+...
+## 🌐 Live Website
+<div style="text-align:center; margin-bottom:40px;">
+  <a href="https://your-website-link.com" target="_blank" style="
+    display: inline-block;
+    background: linear-gradient(90deg, #6366f1 0%, #f472b6 100%);
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: bold;
+    padding: 18px 38px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 2px 12px #a5b4fc33;
+    transition: background 0.2s;
+    ">
+    🚀 Visit the Live Heart Disease Prediction App
+  </a>
+</div>
+...
 
 ---
 
