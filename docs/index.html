@@ -14,147 +14,232 @@
       background: linear-gradient(120deg, #e0e7ff 0%, #fbc2eb 100%);
       position: relative;
       overflow-x: hidden;
-      font-size: 1.13rem;
+      font-size: 1.18rem;
     }
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
       pointer-events: none;
-      opacity: 0.10;
+      opacity: 0.12;
       z-index: 0;
       background: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="60" height="60" fill="white"/><circle cx="30" cy="30" r="1.5" fill="%23a5b4fc"/><circle cx="10" cy="10" r="1" fill="%23f472b6"/><circle cx="50" cy="50" r="1" fill="%23f472b6"/><circle cx="10" cy="50" r="1" fill="%23a5b4fc"/><circle cx="50" cy="10" r="1" fill="%23a5b4fc"/></svg>');
     }
     .container {
-      max-width: 900px;
-      margin: 48px auto 36px auto;
-      background: rgba(255,255,255,0.98);
-      border-radius: 18px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.13);
-      padding: 48px 32px 38px 32px;
+      max-width: 950px;
+      margin: 56px auto 36px auto;
+      background: rgba(255,255,255,0.82);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+      padding: 56px 40px 44px 40px;
       position: relative;
       z-index: 1;
-      font-size: 1.15rem;
+      font-size: 1.18rem;
+      backdrop-filter: blur(8px);
+      border: 1.5px solid #e0e7ff99;
     }
     h1 {
       text-align: center;
-      color: #4f46e5;
-      margin-bottom: 10px;
-      font-size: 2.3rem;
-      letter-spacing: 1px;
-      text-shadow: 0 2px 8px #fbc2eb22;
+      color: #2563eb;
+      margin-bottom: 8px;
+      font-size: 2.8rem;
+      letter-spacing: 1.5px;
+      text-shadow: 0 2px 12px #a5b4fc33;
+      font-weight: 900;
+    }
+    .subtitle {
+      text-align: center;
+      color: #6d28d9;
+      font-size: 1.25rem;
+      margin-bottom: 18px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
     }
     h2 {
-      color: #4f46e5;
-      margin-top: 38px;
-      margin-bottom: 14px;
-      font-size: 1.25rem;
+      color: #2563eb;
+      margin-top: 44px;
+      margin-bottom: 16px;
+      font-size: 1.35rem;
       border-bottom: 2px solid #a5b4fc44;
       display: inline-block;
       padding-bottom: 2px;
       letter-spacing: 0.5px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #6366f1 0%, #f472b6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     .badge {
       display: inline-block;
       background: linear-gradient(90deg, #6366f1 0%, #f472b6 100%);
       color: #fff;
-      border-radius: 6px;
-      padding: 5px 16px;
-      font-size: 1rem;
-      margin: 0 0 18px 0;
+      border-radius: 8px;
+      padding: 7px 22px;
+      font-size: 1.1rem;
+      margin: 0 0 22px 0;
       text-decoration: none;
-      transition: background 0.2s;
+      transition: background 0.2s, transform 0.1s;
       box-shadow: 0 2px 8px #fbc2eb22;
+      font-weight: 700;
+      letter-spacing: 0.5px;
     }
     .badge:hover {
       background: linear-gradient(90deg, #f472b6 0%, #6366f1 100%);
+      transform: scale(1.04);
     }
-    .features-list {
+    .toc {
+      background: #f4f8fbcc;
+      border-radius: 10px;
+      padding: 16px 22px;
+      margin: 22px 0 36px 0;
+      font-size: 1.08rem;
+      box-shadow: 0 1px 4px #a5b4fc22;
+      border: 1px solid #e0e7ff;
+    }
+    .toc ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+    .features-list, .tech-list, .key-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      margin: 18px 0 28px 0;
+      gap: 18px;
+      margin: 22px 0 32px 0;
       padding: 0;
       list-style: none;
       justify-content: center;
     }
-    .features-list li {
+    .features-list li, .tech-list li, .key-list li {
       background: linear-gradient(90deg, #f3e8ff 0%, #e0e7ff 100%);
-      border-radius: 7px;
-      padding: 12px 18px;
-      font-size: 1rem;
-      min-width: 180px;
+      border-radius: 9px;
+      padding: 14px 22px;
+      font-size: 1.07rem;
+      min-width: 150px;
       box-shadow: 0 1px 4px rgba(37,99,235,0.04);
+      text-align: center;
+      font-weight: 500;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .features-list li:hover, .tech-list li:hover, .key-list li:hover {
+      box-shadow: 0 4px 16px #6366f122;
+      transform: translateY(-2px) scale(1.04);
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 22px;
-      margin: 0 0 36px 0;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+      margin: 0 0 44px 0;
       justify-items: center;
     }
     .gallery-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
       background: linear-gradient(120deg, #f3e8ff 0%, #e0e7ff 100%);
-      border-radius: 10px;
+      border-radius: 14px;
       box-shadow: 0 1px 8px #a5b4fc22;
-      padding: 14px 8px 10px 8px;
+      padding: 18px 8px 14px 8px;
       text-align: center;
       border: 1px solid #e0e7ff;
       transition: box-shadow 0.2s, transform 0.2s;
       width: 100%;
-      max-width: 240px;
+      max-width: 260px;
+      min-height: 270px;
     }
     .gallery-item:hover {
       box-shadow: 0 4px 16px #6366f122;
-      transform: translateY(-2px) scale(1.03);
+      transform: translateY(-2px) scale(1.04);
     }
     .gallery-item img {
       width: 100%;
-      max-width: 180px;
-      border-radius: 7px;
-      margin-bottom: 8px;
-      box-shadow: 0 1px 4px #a5b4fc33;
+      max-width: 200px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 8px #a5b4fc33;
       background: #fff;
       border: 1px solid #a5b4fc33;
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: block;
+    }
+    .gallery-item img:hover {
+      box-shadow: 0 4px 16px #6366f122;
+      transform: scale(1.06);
     }
     .gallery-item span {
-      font-size: 1rem;
+      font-size: 1.08rem;
       color: #444;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 0.2px;
+      margin-top: auto;
+      margin-bottom: 0;
+      display: block;
+      word-break: break-word;
+    }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 38px 0 44px 0;
+    }
+    video {
+      border-radius: 16px;
+      box-shadow: 0 2px 12px #a5b4fc33;
+      width: 100%;
+      max-width: 700px;
+      border: 2px solid #a5b4fc44;
+      background: #fff;
     }
     .project-structure {
       background: #f4f8fb;
-      border-radius: 8px;
-      padding: 14px;
+      border-radius: 10px;
+      padding: 18px;
       font-family: 'Fira Mono', 'Consolas', monospace;
-      font-size: 1rem;
-      margin-bottom: 28px;
+      font-size: 1.07rem;
+      margin-bottom: 38px;
       overflow-x: auto;
       border: 1px solid #e0e7ff;
       box-shadow: 0 1px 4px #a5b4fc22;
     }
     .section {
-      margin-bottom: 28px;
+      margin-bottom: 38px;
     }
     .license, .ack {
-      font-size: 1rem;
+      font-size: 1.07rem;
       color: #555;
-      margin-top: 10px;
+      margin-top: 12px;
     }
     .star {
       text-align: center;
-      font-size: 1.1rem;
-      color: #4f46e5;
-      margin-top: 28px;
+      font-size: 1.18rem;
+      color: #2563eb;
+      margin-top: 38px;
       font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #f472b6;
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 1rem;
+      margin-top: 40px;
+      padding-bottom: 10px;
       letter-spacing: 0.5px;
     }
     @media (max-width: 1000px) {
       .container { padding: 18px 2vw; }
-      .gallery { gap: 14px; }
+      .gallery { gap: 18px; }
       .gallery-item img { max-width: 95vw; }
-      .features-list { flex-direction: column; }
+      .features-list, .tech-list, .key-list { flex-direction: column; }
     }
     @media (max-width: 600px) {
       h1 { font-size: 1.5rem; }
@@ -167,6 +252,9 @@
 <body>
   <div class="container">
     <h1>❤️ Heart Disease Prediction</h1>
+    <div class="subtitle">
+      Predict the risk of heart disease with machine learning and interactive visualizations.
+    </div>
     <div style="text-align:center;">
       <a class="badge" href="https://github.com/PrabalJay/heart-disease-prediction" target="_blank">
         View on GitHub
@@ -174,39 +262,73 @@
     </div>
     <div class="section" style="text-align:center;">
       <p>
-        A modern web application that predicts the likelihood of heart disease using machine learning.<br>
+        <b>Description:</b> A modern web application that predicts the likelihood of heart disease using machine learning.<br>
         Built with <b>Flask</b>, <b>scikit-learn</b>, and a visually appealing, responsive interface.
       </p>
     </div>
 
-    <h2>🚀 Features</h2>
-    <ul class="features-list">
-      <li>🖥️ Interactive Web App: User-friendly form for inputting patient data.</li>
-      <li>🤖 Machine Learning Model: Trained on real-world heart disease data.</li>
-      <li>📊 Data Visualization: Explore the dataset with insightful charts.</li>
-      <li>🎨 Attractive UI: Modern, responsive, and easy to use.</li>
-      <li>🔄 Customizable: Easily retrain or update the model with new data.</li>
-    </ul>
-
-    <h2>🌐 Live Website</h2>
-    <div style="text-align:center; margin-bottom:36px;">
-      <a href="https://prabaljay.github.io/heart-disease-prediction/" target="_blank" style="
-        display: inline-block;
-        background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
-        color: #fff;
-        font-size: 1.15rem;
-        font-weight: bold;
-        padding: 14px 32px;
-        border-radius: 10px;
-        text-decoration: none;
-        box-shadow: 0 2px 12px #a5b4fc33;
-        transition: background 0.2s;
-        ">
-        🚀 Visit the Live Heart Disease Prediction App
-      </a>
+    <div class="toc">
+      <b>Table of Contents</b>
+      <ul>
+        <li><a href="#about">About the Project</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#key-terms">Key Terms</a></li>
+        <li><a href="#demo-video">Demo Video</a></li>
+        <li><a href="#output-gallery">Output Gallery</a></li>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#how-to-start">How to Start</a></li>
+        <li><a href="#links-and-resources">Links & Resources</a></li>
+        <li><a href="#license">License</a></li>
+        <li><a href="#acknowledgements">Acknowledgements</a></li>
+      </ul>
     </div>
 
-    <h2>📸 Output Gallery</h2>
+    <h2 id="about">📖 About the Project</h2>
+    <div class="section">
+      <p>
+        This project provides an interactive web application for predicting the risk of heart disease based on patient data. It leverages a machine learning model trained on real-world datasets and offers insightful data visualizations, a modern UI, and easy extensibility.
+      </p>
+    </div>
+
+    <h2 id="features">🚀 Features</h2>
+    <ul class="features-list">
+      <li>🖥️ Interactive Web App</li>
+      <li>🤖 Machine Learning Model</li>
+      <li>📊 Data Visualization</li>
+      <li>🎨 Attractive UI</li>
+      <li>🔄 Customizable & Extensible</li>
+    </ul>
+
+    <h2 id="technologies">🛠️ Technologies</h2>
+    <ul class="tech-list">
+      <li>Python</li>
+      <li>Flask</li>
+      <li>scikit-learn</li>
+      <li>Pandas</li>
+      <li>HTML5 & CSS3</li>
+      <li>Jupyter Notebook</li>
+    </ul>
+
+    <h2 id="key-terms">🗝️ Key Terms</h2>
+    <ul class="key-list">
+      <li>Random Forest</li>
+      <li>Classification</li>
+      <li>Confusion Matrix</li>
+      <li>Data Preprocessing</li>
+      <li>Model Evaluation</li>
+      <li>Visualization</li>
+    </ul>
+
+    <h2 id="demo-video">🎬 Demo Video</h2>
+    <div class="video-container">
+      <video controls>
+        <source src="images/demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <h2 id="output-gallery">📸 Output Gallery</h2>
     <div class="gallery">
       <div class="gallery-item">
         <img src="images/final_app.png" alt="Final App Screenshot">
@@ -238,41 +360,14 @@
       </div>
     </div>
 
-    <h2>📂 Project Structure</h2>
-    <pre class="project-structure">
-heart-disease-prediction
-│
-├── app.py                     # Main entry point of the Flask application
-├── requirements.txt           # Lists the dependencies required for the project
-├── src
-│   ├── data_preprocessing.py  # Functions for data preprocessing
-│   └── train_model.py         # Logic for training the machine learning model
-├── data
-│   ├── raw
-│   │   └── dataset.csv        # Raw dataset used for training the model
-│   └── processed
-│       ├── X_train.csv        # Processed training features
-│       ├── X_test.csv         # Processed testing features
-│       ├── y_train.csv        # Processed training labels
-│       └── y_test.csv         # Processed testing labels
-├── images/                    # Outputs
-│   ├── app.png
-│   ├── final_app.png
-│   ├── data.png
-│   ├── train_model.png
-│   ├── cm.png
-│   ├── output.png
-│   └── hdd.png
-├── models
-│   └── best_model.pkl         # Trained machine learning model
-├── templates
-│   └── index.html             # HTML template for the web application's home page
-├── notebooks
-│   └── data_exploration.ipynb # Notebook for exploratory data analysis
-└── README.md                  # Documentation for the project
-    </pre>
+    <h2 id="usage">📝 Usage</h2>
+    <ul>
+      <li>Fill in the form with patient details.</li>
+      <li>Click <b>Predict</b> to see the result.</li>
+      <li>Explore data visualizations in the <code>notebooks/</code> folder.</li>
+    </ul>
 
-    <h2>⚙️ Installation</h2>
+    <h2 id="how-to-start">🚦 How to Start</h2>
     <div class="section">
       <ol>
         <li><b>Clone the repository:</b>
@@ -298,34 +393,22 @@ python src/train_model.py</pre>
       </ol>
     </div>
 
-    <h2>📝 Usage</h2>
+    <h2 id="links-and-resources">🔗 Links & Resources</h2>
     <ul>
-      <li>Fill in the form with patient details.</li>
-      <li>Click <b>Predict</b> to see the result.</li>
-      <li>Explore data visualizations in the <code>notebooks/</code> folder.</li>
+      <li><a href="https://prabaljay.github.io/heart-disease-prediction/" target="_blank">🌐 Live Website</a></li>
+      <li><a href="https://github.com/PrabalJay/heart-disease-prediction" target="_blank">GitHub Repository</a></li>
+      <li><a href="https://flask.palletsprojects.com/" target="_blank">Flask Documentation</a></li>
+      <li><a href="https://scikit-learn.org/" target="_blank">scikit-learn Documentation</a></li>
     </ul>
 
-    <h2>📊 Model</h2>
-    <ul>
-      <li><b>Algorithm:</b> Random Forest Classifier</li>
-      <li><b>Features:</b> Age, Sex, Chest Pain Type, Blood Pressure, Cholesterol, etc.</li>
-      <li><b>Evaluation:</b> Accuracy, Confusion Matrix, Classification Report</li>
-    </ul>
-
-    <h2>🤝 Contributing</h2>
-    <div class="section">
-      Pull requests are welcome! For major changes, please open an issue first.
-    </div>
-
-    <h2>📄 License</h2>
+    <h2 id="license">📄 License</h2>
     <div class="license">
       This project is licensed under the MIT License.
     </div>
 
-    <h2>🙏 Acknowledgements</h2>
+    <h2 id="acknowledgements">🙏 Acknowledgements</h2>
     <div class="ack">
       <ul>
-        <li><a href="https://archive.ics.uci.edu/ml/datasets/heart+Disease" target="_blank">UCI Heart Disease Dataset</a></li>
         <li><a href="https://flask.palletsprojects.com/" target="_blank">Flask</a></li>
         <li><a href="https://scikit-learn.org/" target="_blank">scikit-learn</a></li>
       </ul>
@@ -335,5 +418,8 @@ python src/train_model.py</pre>
       ⭐ Star this repo if you found it useful!
     </div>
   </div>
+  <footer>
+    Made with ❤️ by <a href="https://github.com/PrabalJay" target="_blank">Prabal Jay</a>
+  </footer>
 </body>
 </html>
