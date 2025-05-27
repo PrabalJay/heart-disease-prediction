@@ -6,14 +6,11 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import joblib
 
 def train_model():
-    # Load processed data
     X_train = pd.read_csv('data/processed/X_train.csv')
     y_train = pd.read_csv('data/processed/y_train.csv').squeeze()
     
-    # Define model
     model = RandomForestClassifier(random_state=42)
     
-    # Hyperparameter tuning
     param_grid = {
         'n_estimators': [100, 200, 300],
         'max_depth': [None, 5, 10],
@@ -25,10 +22,8 @@ def train_model():
     
     best_model = grid_search.best_estimator_
     
-    # Save model
     joblib.dump(best_model, 'models/best_model.pkl')
     
-    # Evaluate on test set
     X_test = pd.read_csv('data/processed/X_test.csv')
     y_test = pd.read_csv('data/processed/y_test.csv').squeeze()
     

@@ -5,7 +5,6 @@ import numpy as np
 
 app = Flask(__name__)
 
-# Load model
 model = joblib.load('models/best_model.pkl')
 
 @app.route('/')
@@ -15,7 +14,6 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
-        # Get data from form
         data = {
             'age': float(request.form['age']),
             'sex': int(request.form['sex']),
@@ -30,10 +28,8 @@ def predict():
             'ST slope': int(request.form['st_slope'])
         }
         
-        # Convert to DataFrame
         df = pd.DataFrame(data, index=[0])
         
-        # Make prediction
         prediction = model.predict(df)
         probability = model.predict_proba(df)[0][1]
         
