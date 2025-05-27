@@ -8,137 +8,188 @@
   <style>
     body {
       font-family: 'Montserrat', Arial, sans-serif;
-      background: linear-gradient(120deg, #f857a6 0%, #ff5858 100%);
       margin: 0;
       color: #222;
+      min-height: 100vh;
+      background: linear-gradient(120deg, #e0e7ff 0%, #fbc2eb 100%);
+      position: relative;
+      overflow-x: hidden;
+      font-size: 1.18rem;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      opacity: 0.13;
+      z-index: 0;
+      background: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="60" height="60" fill="white"/><circle cx="30" cy="30" r="1.5" fill="%23a5b4fc"/><circle cx="10" cy="10" r="1" fill="%23f472b6"/><circle cx="50" cy="50" r="1" fill="%23f472b6"/><circle cx="10" cy="50" r="1" fill="%23a5b4fc"/><circle cx="50" cy="10" r="1" fill="%23a5b4fc"/></svg>');
     }
     .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-      padding: 40px 30px 30px 30px;
-      animation: fadeIn 1s;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(40px);}
-      to { opacity: 1; transform: translateY(0);}
+      max-width: 1300px;
+      margin: 56px auto 36px auto;
+      background: rgba(255,255,255,0.97);
+      border-radius: 22px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+      padding: 64px 60px 48px 60px;
+      position: relative;
+      z-index: 1;
+      font-size: 1.22rem;
     }
     h1 {
       text-align: center;
-      color: #f857a6;
-      margin-bottom: 10px;
+      color: #4f46e5;
+      margin-bottom: 12px;
+      font-size: 3rem;
       letter-spacing: 1px;
-      font-size: 2.5rem;
+      text-shadow: 0 2px 8px #fbc2eb33;
     }
     h2 {
-      color: #f857a6;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      font-size: 1.6rem;
-      border-bottom: 2px solid #f857a6;
+      color: #4f46e5;
+      margin-top: 48px;
+      margin-bottom: 18px;
+      font-size: 1.7rem;
+      border-bottom: 2px solid #a5b4fc44;
       display: inline-block;
       padding-bottom: 2px;
+      letter-spacing: 0.5px;
     }
     .badge {
       display: inline-block;
-      background: #24292f;
+      background: linear-gradient(90deg, #6366f1 0%, #f472b6 100%);
       color: #fff;
       border-radius: 6px;
-      padding: 4px 12px;
-      font-size: 1rem;
-      margin: 0 0 20px 0;
+      padding: 7px 22px;
+      font-size: 1.15rem;
+      margin: 0 0 28px 0;
       text-decoration: none;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px #fbc2eb22;
     }
-    .features {
+    .badge:hover {
+      background: linear-gradient(90deg, #f472b6 0%, #6366f1 100%);
+    }
+    .features-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
-      margin: 20px 0 30px 0;
+      gap: 22px;
+      margin: 28px 0 38px 0;
+      padding: 0;
+      list-style: none;
+      justify-content: center;
+      font-size: 1.15rem;
     }
-    .feature {
-      background: #f8e1ec;
-      border-radius: 8px;
-      padding: 18px 18px 12px 18px;
-      flex: 1 1 220px;
-      min-width: 180px;
-      box-shadow: 0 2px 8px rgba(248,87,166,0.06);
-      font-size: 1.05rem;
-    }
-    .demo-img {
-      display: block;
-      margin: 0 auto 18px auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(248,87,166,0.10);
-      max-width: 100%;
-      width: 600px;
+    .features-list li {
+      background: linear-gradient(90deg, #f3e8ff 0%, #e0e7ff 100%);
+      border-radius: 11px;
+      padding: 18px 28px;
+      font-size: 1.13rem;
+      min-width: 220px;
+      box-shadow: 0 1px 6px #a5b4fc22;
+      border: 1px solid #e0e7ff;
     }
     .video-container {
       display: flex;
       justify-content: center;
-      margin: 20px 0 30px 0;
+      margin: 32px 0 40px 0;
     }
     video {
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(248,87,166,0.10);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px #a5b4fc33;
       width: 100%;
-      max-width: 600px;
+      max-width: 800px;
+      border: 2px solid #a5b4fc44;
+      background: #fff;
     }
-    .output-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0 30px 0;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      margin: 0 0 48px 0;
     }
-    .output-table th, .output-table td {
-      padding: 10px;
+    .gallery-item {
+      background: linear-gradient(120deg, #f3e8ff 0%, #e0e7ff 100%);
+      border-radius: 14px;
+      box-shadow: 0 1px 8px #a5b4fc22;
+      padding: 18px 8px 14px 8px;
       text-align: center;
+      border: 1px solid #e0e7ff;
+      transition: box-shadow 0.2s, transform 0.2s;
     }
-    .output-table img {
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(248,87,166,0.08);
-      width: 180px;
-      max-width: 95vw;
+    .gallery-item:hover {
+      box-shadow: 0 4px 16px #6366f122;
+      transform: translateY(-2px) scale(1.03);
+    }
+    .gallery-item img {
+      width: 100%;
+      max-width: 240px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 8px #a5b4fc33;
+      background: #fff;
+      border: 1px solid #a5b4fc33;
+    }
+    .gallery-item span {
+      font-size: 1.13rem;
+      color: #444;
+      font-weight: 500;
+      letter-spacing: 0.2px;
     }
     .project-structure {
-      background: #fafafa;
-      border-radius: 8px;
+      background: #f4f8fb;
+      border-radius: 10px;
       padding: 18px;
       font-family: 'Fira Mono', 'Consolas', monospace;
-      font-size: 1rem;
-      margin-bottom: 30px;
+      font-size: 1.07rem;
+      margin-bottom: 38px;
       overflow-x: auto;
+      border: 1px solid #e0e7ff;
+      box-shadow: 0 1px 4px #a5b4fc22;
     }
     .section {
-      margin-bottom: 30px;
+      margin-bottom: 38px;
     }
     .license, .ack {
-      font-size: 1rem;
+      font-size: 1.07rem;
       color: #555;
-      margin-top: 10px;
+      margin-top: 12px;
     }
     .star {
       text-align: center;
-      font-size: 1.2rem;
-      color: #f857a6;
-      margin-top: 30px;
+      font-size: 1.18rem;
+      color: #4f46e5;
+      margin-top: 38px;
       font-weight: bold;
+      letter-spacing: 0.5px;
     }
-    @media (max-width: 700px) {
-      .container { padding: 10px 2vw; }
-      .demo-img, video { width: 98vw; }
-      .output-table img { width: 90vw; }
-      .features { flex-direction: column; }
+    @media (max-width: 1200px) {
+      .container { padding: 32px 2vw; }
+      .gallery { gap: 18px; }
+      .gallery-item img, video { max-width: 98vw; }
+    }
+    @media (max-width: 900px) {
+      .container { padding: 18px 2vw; }
+      .gallery { gap: 14px; }
+      .gallery-item img, video { max-width: 95vw; }
+      .features-list { flex-direction: column; }
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.7rem; }
+      .container { padding: 6px 1vw; }
+      .gallery { gap: 10px; }
+      .gallery-item img { max-width: 90vw; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>❤️ Heart Disease Prediction</h1>
-    <a class="badge" href="https://github.com/PrabalJay/heart-disease-prediction" target="_blank">
-      View on GitHub
-    </a>
-    <div class="section">
+    <div style="text-align:center;">
+      <a class="badge" href="https://github.com/PrabalJay/heart-disease-prediction" target="_blank">
+        View on GitHub
+      </a>
+    </div>
+    <div class="section" style="text-align:center;">
       <p>
         A modern web application that predicts the likelihood of heart disease using machine learning.<br>
         Built with <b>Flask</b>, <b>scikit-learn</b>, and a visually appealing, responsive interface.
@@ -146,16 +197,13 @@
     </div>
 
     <h2>🚀 Features</h2>
-    <div class="features">
-      <div class="feature">🖥️ Interactive Web App: User-friendly form for inputting patient data.</div>
-      <div class="feature">🤖 Machine Learning Model: Trained on real-world heart disease data.</div>
-      <div class="feature">📊 Data Visualization: Explore the dataset with insightful charts.</div>
-      <div class="feature">🎨 Attractive UI: Modern, responsive, and easy to use.</div>
-      <div class="feature">🔄 Customizable: Easily retrain or update the model with new data.</div>
-    </div>
-
-    <h2>🖥️ Demo</h2>
-    <img class="demo-img" src="images/final_app.png" alt="Final App Screenshot">
+    <ul class="features-list">
+      <li>🖥️ Interactive Web App: User-friendly form for inputting patient data.</li>
+      <li>🤖 Machine Learning Model: Trained on real-world heart disease data.</li>
+      <li>📊 Data Visualization: Explore the dataset with insightful charts.</li>
+      <li>🎨 Attractive UI: Modern, responsive, and easy to use.</li>
+      <li>🔄 Customizable: Easily retrain or update the model with new data.</li>
+    </ul>
 
     <h2>🎬 Demo Video</h2>
     <div class="video-container">
@@ -165,27 +213,37 @@
       </video>
     </div>
 
-    <h2>📸 Output Images</h2>
-    <table class="output-table">
-      <tr>
-        <th>Final App</th>
-        <th>Data Exploration</th>
-        <th>Model Training</th>
-        <th>Confusion Matrix</th>
-        <th>Output Example</th>
-        <th>App Screenshot</th>
-        <th>Heart Disease Distribution</th>
-      </tr>
-      <tr>
-        <td><img src="images/final_app.png" alt="Final App Screenshot"></td>
-        <td><img src="images/data.png" alt="Data Exploration"></td>
-        <td><img src="images/train_model.png" alt="Model Training"></td>
-        <td><img src="images/cm.png" alt="Confusion Matrix"></td>
-        <td><img src="images/output.png" alt="Output Example"></td>
-        <td><img src="images/app.png" alt="App Screenshot"></td>
-        <td><img src="images/hdd.png" alt="Heart Disease Distribution"></td>
-      </tr>
-    </table>
+    <h2>📸 Output Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="images/final_app.png" alt="Final App Screenshot">
+        <span>Final App</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/data.png" alt="Data Exploration">
+        <span>Data Exploration</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/train_model.png" alt="Model Training">
+        <span>Model Training</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/cm.png" alt="Confusion Matrix">
+        <span>Confusion Matrix</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/output.png" alt="Output Example">
+        <span>Output Example</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/app.png" alt="App Screenshot">
+        <span>App Screenshot</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/hdd.png" alt="Heart Disease Distribution">
+        <span>Heart Disease Distribution</span>
+      </div>
+    </div>
 
     <h2>📂 Project Structure</h2>
     <pre class="project-structure">
@@ -210,7 +268,8 @@ heart-disease-prediction
 │   ├── data.png
 │   ├── train_model.png
 │   ├── cm.png
-│   └── output.png
+│   ├── output.png
+│   └── hdd.png
 ├── models
 │   └── best_model.pkl         # Trained machine learning model
 ├── templates
