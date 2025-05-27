@@ -3,17 +3,33 @@
 A modern web application that predicts the likelihood of heart disease using machine learning.  
 Built with **Flask**, **scikit-learn**, and a visually appealing, responsive interface.
 
-[![View on GitHub](https://img.shields.io/badge/GitHub-View%20Repository-blue?logo=github)](https://github.com/PrabalJay/heart-disease-prediction)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View%20Repository-2563eb?logo=github&style=for-the-badge)](https://github.com/PrabalJay/heart-disease-prediction)
+
+---
+
+## 📑 Table of Contents
+
+- [🚀 Features](#-features)
+- [🖥️ Demo](#️-demo)
+- [🌐 Live Website](#-live-website)
+- [📸 Output Gallery](#-output-gallery)
+- [📂 Project Structure](#-project-structure)
+- [⚙️ Installation](#-installation)
+- [📝 Usage](#-usage)
+- [📊 Model](#-model)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [🙏 Acknowledgements](#-acknowledgements)
 
 ---
 
 ## 🚀 Features
 
-- **Interactive Web App:** User-friendly form for inputting patient data.
-- **Machine Learning Model:** Trained on real-world heart disease data.
-- **Data Visualization:** Explore the dataset with insightful charts.
-- **Attractive UI:** Modern, responsive, and easy to use.
-- **Customizable:** Easily retrain or update the model with new data.
+- 🖥️ **Interactive Web App:** User-friendly form for inputting patient data.
+- 🤖 **Machine Learning Model:** Trained on real-world heart disease data.
+- 📊 **Data Visualization:** Explore the dataset with insightful charts.
+- 🎨 **Attractive UI:** Modern, responsive, and easy to use.
+- 🔄 **Customizable:** Easily retrain or update the model with new data.
 
 ---
 
@@ -25,33 +41,39 @@ Built with **Flask**, **scikit-learn**, and a visually appealing, responsive int
 
 ---
 
-...
 ## 🌐 Live Website
-<div style="text-align:center; margin-bottom:40px;">
-  <a href="https://your-website-link.com" target="_blank" style="
-    display: inline-block;
-    background: linear-gradient(90deg, #6366f1 0%, #f472b6 100%);
-    color: #fff;
-    font-size: 1.35rem;
-    font-weight: bold;
-    padding: 18px 38px;
-    border-radius: 12px;
-    text-decoration: none;
-    box-shadow: 0 2px 12px #a5b4fc33;
-    transition: background 0.2s;
-    ">
-    🚀 Visit the Live Heart Disease Prediction App
+
+<p align="center">
+  <a href="https://prabaljay.github.io/heart-disease-prediction/" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Website-Click%20Here-2563eb?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Live Website"/>
   </a>
-</div>
-...
+</p>
 
 ---
 
-## 📸 Output Images
+## 📸 Output Gallery
 
-| Data Exploration | Model Training | Confusion Matrix | Output Example |
-|:---------------:|:--------------:|:---------------:|:-------------:|
-| ![Data](images/data.png) | ![Train Model](images/train_model.png) | ![Confusion Matrix](images/cm.png) | ![Output](images/output.png) |
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center"><img src="images/final_app.png" width="220"/><br>Final App</td>
+    <td align="center"><img src="images/data.png" width="220"/><br>Data Exploration</td>
+    <td align="center"><img src="images/train_model.png" width="220"/><br>Model Training</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/cm.png" width="220"/><br>Confusion Matrix</td>
+    <td align="center"><img src="images/output.png" width="220"/><br>Output Example</td>
+    <td align="center"><img src="images/app.png" width="220"/><br>App Screenshot</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/hdd.png" width="220"/><br>Heart Disease Distribution</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+</div>
 
 ---
 
@@ -79,7 +101,8 @@ heart-disease-prediction
 │   ├── data.png
 │   ├── train_model.png
 │   ├── cm.png
-│   └── output.png
+│   ├── output.png
+│   └── hdd.png
 ├── models
 │   └── best_model.pkl         # Trained machine learning model
 ├── templates
@@ -87,7 +110,6 @@ heart-disease-prediction
 ├── notebooks
 │   └── data_exploration.ipynb # Notebook for exploratory data analysis
 └── README.md                  # Documentation for the project
-
 ```
 
 ---

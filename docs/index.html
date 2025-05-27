@@ -14,41 +14,41 @@
       background: linear-gradient(120deg, #e0e7ff 0%, #fbc2eb 100%);
       position: relative;
       overflow-x: hidden;
-      font-size: 1.18rem;
+      font-size: 1.13rem;
     }
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
       pointer-events: none;
-      opacity: 0.13;
+      opacity: 0.10;
       z-index: 0;
       background: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="60" height="60" fill="white"/><circle cx="30" cy="30" r="1.5" fill="%23a5b4fc"/><circle cx="10" cy="10" r="1" fill="%23f472b6"/><circle cx="50" cy="50" r="1" fill="%23f472b6"/><circle cx="10" cy="50" r="1" fill="%23a5b4fc"/><circle cx="50" cy="10" r="1" fill="%23a5b4fc"/></svg>');
     }
     .container {
-      max-width: 1300px;
-      margin: 56px auto 36px auto;
-      background: rgba(255,255,255,0.97);
-      border-radius: 22px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
-      padding: 64px 60px 48px 60px;
+      max-width: 900px;
+      margin: 48px auto 36px auto;
+      background: rgba(255,255,255,0.98);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.13);
+      padding: 48px 32px 38px 32px;
       position: relative;
       z-index: 1;
-      font-size: 1.22rem;
+      font-size: 1.15rem;
     }
     h1 {
       text-align: center;
       color: #4f46e5;
-      margin-bottom: 12px;
-      font-size: 3rem;
+      margin-bottom: 10px;
+      font-size: 2.3rem;
       letter-spacing: 1px;
-      text-shadow: 0 2px 8px #fbc2eb33;
+      text-shadow: 0 2px 8px #fbc2eb22;
     }
     h2 {
       color: #4f46e5;
-      margin-top: 48px;
-      margin-bottom: 18px;
-      font-size: 1.7rem;
+      margin-top: 38px;
+      margin-bottom: 14px;
+      font-size: 1.25rem;
       border-bottom: 2px solid #a5b4fc44;
       display: inline-block;
       padding-bottom: 2px;
@@ -59,9 +59,9 @@
       background: linear-gradient(90deg, #6366f1 0%, #f472b6 100%);
       color: #fff;
       border-radius: 6px;
-      padding: 7px 22px;
-      font-size: 1.15rem;
-      margin: 0 0 28px 0;
+      padding: 5px 16px;
+      font-size: 1rem;
+      margin: 0 0 18px 0;
       text-decoration: none;
       transition: background 0.2s;
       box-shadow: 0 2px 8px #fbc2eb22;
@@ -72,49 +72,37 @@
     .features-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 22px;
-      margin: 28px 0 38px 0;
+      gap: 14px;
+      margin: 18px 0 28px 0;
       padding: 0;
       list-style: none;
       justify-content: center;
-      font-size: 1.15rem;
     }
     .features-list li {
       background: linear-gradient(90deg, #f3e8ff 0%, #e0e7ff 100%);
-      border-radius: 11px;
-      padding: 18px 28px;
-      font-size: 1.13rem;
-      min-width: 220px;
-      box-shadow: 0 1px 6px #a5b4fc22;
-      border: 1px solid #e0e7ff;
-    }
-    .video-container {
-      display: flex;
-      justify-content: center;
-      margin: 32px 0 40px 0;
-    }
-    video {
-      border-radius: 16px;
-      box-shadow: 0 2px 12px #a5b4fc33;
-      width: 100%;
-      max-width: 800px;
-      border: 2px solid #a5b4fc44;
-      background: #fff;
+      border-radius: 7px;
+      padding: 12px 18px;
+      font-size: 1rem;
+      min-width: 180px;
+      box-shadow: 0 1px 4px rgba(37,99,235,0.04);
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
-      margin: 0 0 48px 0;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 22px;
+      margin: 0 0 36px 0;
+      justify-items: center;
     }
     .gallery-item {
       background: linear-gradient(120deg, #f3e8ff 0%, #e0e7ff 100%);
-      border-radius: 14px;
+      border-radius: 10px;
       box-shadow: 0 1px 8px #a5b4fc22;
-      padding: 18px 8px 14px 8px;
+      padding: 14px 8px 10px 8px;
       text-align: center;
       border: 1px solid #e0e7ff;
       transition: box-shadow 0.2s, transform 0.2s;
+      width: 100%;
+      max-width: 240px;
     }
     .gallery-item:hover {
       box-shadow: 0 4px 16px #6366f122;
@@ -122,59 +110,54 @@
     }
     .gallery-item img {
       width: 100%;
-      max-width: 240px;
-      border-radius: 10px;
-      margin-bottom: 12px;
-      box-shadow: 0 1px 8px #a5b4fc33;
+      max-width: 180px;
+      border-radius: 7px;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 4px #a5b4fc33;
       background: #fff;
       border: 1px solid #a5b4fc33;
     }
     .gallery-item span {
-      font-size: 1.13rem;
+      font-size: 1rem;
       color: #444;
       font-weight: 500;
       letter-spacing: 0.2px;
     }
     .project-structure {
       background: #f4f8fb;
-      border-radius: 10px;
-      padding: 18px;
+      border-radius: 8px;
+      padding: 14px;
       font-family: 'Fira Mono', 'Consolas', monospace;
-      font-size: 1.07rem;
-      margin-bottom: 38px;
+      font-size: 1rem;
+      margin-bottom: 28px;
       overflow-x: auto;
       border: 1px solid #e0e7ff;
       box-shadow: 0 1px 4px #a5b4fc22;
     }
     .section {
-      margin-bottom: 38px;
+      margin-bottom: 28px;
     }
     .license, .ack {
-      font-size: 1.07rem;
+      font-size: 1rem;
       color: #555;
-      margin-top: 12px;
+      margin-top: 10px;
     }
     .star {
       text-align: center;
-      font-size: 1.18rem;
+      font-size: 1.1rem;
       color: #4f46e5;
-      margin-top: 38px;
+      margin-top: 28px;
       font-weight: bold;
       letter-spacing: 0.5px;
     }
-    @media (max-width: 1200px) {
-      .container { padding: 32px 2vw; }
-      .gallery { gap: 18px; }
-      .gallery-item img, video { max-width: 98vw; }
-    }
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
       .container { padding: 18px 2vw; }
       .gallery { gap: 14px; }
-      .gallery-item img, video { max-width: 95vw; }
+      .gallery-item img { max-width: 95vw; }
       .features-list { flex-direction: column; }
     }
     @media (max-width: 600px) {
-      h1 { font-size: 1.7rem; }
+      h1 { font-size: 1.5rem; }
       .container { padding: 6px 1vw; }
       .gallery { gap: 10px; }
       .gallery-item img { max-width: 90vw; }
@@ -205,12 +188,22 @@
       <li>🔄 Customizable: Easily retrain or update the model with new data.</li>
     </ul>
 
-    <h2>🎬 Demo Video</h2>
-    <div class="video-container">
-      <video controls>
-        <source src="images/demo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <h2>🌐 Live Website</h2>
+    <div style="text-align:center; margin-bottom:36px;">
+      <a href="https://prabaljay.github.io/heart-disease-prediction/" target="_blank" style="
+        display: inline-block;
+        background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+        color: #fff;
+        font-size: 1.15rem;
+        font-weight: bold;
+        padding: 14px 32px;
+        border-radius: 10px;
+        text-decoration: none;
+        box-shadow: 0 2px 12px #a5b4fc33;
+        transition: background 0.2s;
+        ">
+        🚀 Visit the Live Heart Disease Prediction App
+      </a>
     </div>
 
     <h2>📸 Output Gallery</h2>
