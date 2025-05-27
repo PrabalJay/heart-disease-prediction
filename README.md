@@ -25,6 +25,17 @@ Built with **Flask**, **scikit-learn**, and a visually appealing, responsive int
 
 ---
 
+## 🎬 Demo Video
+
+<p align="center">
+  <video width="600" controls>
+    <source src="images/demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</p>
+
+---
+
 ## 📸 Output Images
 
 | Data Exploration | Model Training | Confusion Matrix | Output Example |
