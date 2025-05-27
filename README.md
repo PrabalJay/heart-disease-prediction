@@ -1,6 +1,9 @@
-# heart-disease-prediction
+# ❤️ Heart Disease Prediction
 
-A web application that predicts the likelihood of heart disease using machine learning. Built with Flask, scikit-learn, and a modern, responsive interface.
+A modern web application that predicts the likelihood of heart disease using machine learning.  
+Built with **Flask**, **scikit-learn**, and a visually appealing, responsive interface.
+
+[![View on GitHub](https://img.shields.io/badge/GitHub-View%20Repository-blue?logo=github)](https://github.com/PrabalJay/heart-disease-prediction)
 
 ---
 
@@ -9,13 +12,24 @@ A web application that predicts the likelihood of heart disease using machine le
 - **Interactive Web App:** User-friendly form for inputting patient data.
 - **Machine Learning Model:** Trained on real-world heart disease data.
 - **Data Visualization:** Explore the dataset with insightful charts.
+- **Attractive UI:** Modern, responsive, and easy to use.
 - **Customizable:** Easily retrain or update the model with new data.
 
 ---
 
 ## 🖥️ Demo
 
-![App Screenshot](images/app.png)
+<p align="center">
+  <img src="images/final_app.png" alt="Final App Screenshot" width="600"/>
+</p>
+
+---
+
+## 📸 Output Images
+
+| Data Exploration | Model Training | Confusion Matrix | Output Example |
+|:---------------:|:--------------:|:---------------:|:-------------:|
+| ![Data](images/data.png) | ![Train Model](images/train_model.png) | ![Confusion Matrix](images/cm.png) | ![Output](images/output.png) |
 
 ---
 
@@ -38,12 +52,18 @@ heart-disease-prediction
 │       ├── y_train.csv        # Processed training labels
 │       └── y_test.csv         # Processed testing labels
 ├── images/                    # Outputs
+│   ├── app.png
+│   ├── final_app.png
+│   ├── data.png
+│   ├── train_model.png
+│   ├── cm.png
+│   └── output.png
 ├── models
 │   └── best_model.pkl         # Trained machine learning model
 ├── templates
 │   └── index.html             # HTML template for the web application's home page
 ├── notebooks
-│   └── data_exploration.ipynb # Jupyter notebook for exploratory data analysis
+│   └── data_exploration.ipynb # Notebook for exploratory data analysis
 └── README.md                  # Documentation for the project
 
 ```
@@ -95,12 +115,6 @@ heart-disease-prediction
 
 ---
 
-## 📸 Output Images
-
-You can find output images and screenshots in the [`images/`](images/) folder.
-
----
-
 ## 🤝 Contributing
 
 Pull requests are welcome! For major changes, please open an issue first.
@@ -118,3 +132,9 @@ This project is licensed under the MIT License.
 - [UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/heart+Disease)
 - [Flask](https://flask.palletsprojects.com/)
 - [scikit-learn](https://scikit-learn.org/)
+
+---
+
+<p align="center">
+  <b>⭐ Star this repo if you found it useful!</b>
+</p>
