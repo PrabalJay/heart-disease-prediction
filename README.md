@@ -173,7 +173,6 @@ This project is licensed under the MIT License.
 
 ## 🙏 Acknowledgements
 
-- [UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/heart+Disease)
 - [Flask](https://flask.palletsprojects.com/)
 - [scikit-learn](https://scikit-learn.org/)
 
